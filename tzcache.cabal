@@ -1,0 +1,28 @@
+name:              tzcache
+version:           0.0.1
+license:           PublicDomain
+author:            David L. L. Thomas
+maintainer:        David L. L. Thomas
+synopsis:          Cache timezone information
+description:       Read Olson zoneinfo files from /usr/share/zoneinfo into a map.
+category:          Time
+stability:         Experimental
+cabal-version:     >= 1.8
+build-type:        Simple
+homepage:          https://github.com/dlthomas/tzcache
+
+
+library
+    exposed-modules: Data.Time.TimeZone.TzCache
+
+    ghc-options:   -Wall -O2
+
+    extensions: 
+
+    build-depends: base                          >= 4          && < 5
+                 , mtl
+                 , timezone-series
+                 , timezone-olson
+                 , directory
+                 , containers
+                 , unix
